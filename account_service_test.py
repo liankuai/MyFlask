@@ -12,7 +12,9 @@ if __name__ == "__main__":
         assert(response["header"]["desc"]=="success" and response["header"]["status"]==0)
         data=response["body"]["data"][0];        print(data)
         data["budget"]=88
-        
+
+
+
         response=service.updateAccountInfo({"accountInfo":data})
         assert(response["header"]["desc"]=="success" and response["header"]["status"]==0)
         print(data)
